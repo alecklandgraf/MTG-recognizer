@@ -1,0 +1,31 @@
+{
+  "name": "MTG-recognizer",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://alecklandgraf.github.io/mtg",
+  "dependencies": {
+    "@material-ui/core": "^3.8.1",
+    "@material-ui/icons": "^3.0.1",
+    "fuse.js": "^3.3.0",
+    "lodash": "^4.17.11",
+    "react": "16.7.0-alpha.2",
+    "react-dom": "16.7.0-alpha.2",
+    "react-scripts": "2.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "generateCardsMap": "node ./scripts/generateCardsMap"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
