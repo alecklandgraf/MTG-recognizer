@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/MTG-recognizer/precache-manifest.344dcbf7a38a1f82287f37b0c4bcc4ce.js"
+  "/MTG-recognizer/precache-manifest.a92f4be232e7054f7d55e33514d04626.js"
 );
 
 workbox.clientsClaim();
