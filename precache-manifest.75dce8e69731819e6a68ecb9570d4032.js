@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/MTG-recognizer/static/css/1.7d922a03.chunk.css"
   },
   {
-    "revision": "25eecee3e20c34f590d0cf406e8d0b90",
+    "revision": "e0cf680ae9185e2c75e5edf0a7d8d8a2",
     "url": "/MTG-recognizer/index.html"
   }
 ];
