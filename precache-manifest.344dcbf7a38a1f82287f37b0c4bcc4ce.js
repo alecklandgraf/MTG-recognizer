@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/MTG-recognizer/static/js/runtime~main.a7881a4e.js"
   },
   {
-    "revision": "a2c82f8544f7d235d315",
-    "url": "/MTG-recognizer/static/js/main.a2c82f85.chunk.js"
+    "revision": "54e48dae2cfade0b130d",
+    "url": "/MTG-recognizer/static/js/main.54e48dae.chunk.js"
   },
   {
     "revision": "7ab140479779e9f0ea42",
     "url": "/MTG-recognizer/static/js/1.7ab14047.chunk.js"
   },
   {
-    "revision": "a2c82f8544f7d235d315",
+    "revision": "54e48dae2cfade0b130d",
     "url": "/MTG-recognizer/static/css/main.390d6a49.chunk.css"
   },
   {
-    "revision": "2763fdb5329a9c810f284733c9c499df",
+    "revision": "22a1725c7b631bcfe08a0bc77604cf3c",
     "url": "/MTG-recognizer/index.html"
   }
 ];

@@ -1,13 +1,13 @@
 {
   "main.css": "/MTG-recognizer/static/css/main.390d6a49.chunk.css",
-  "main.js": "/MTG-recognizer/static/js/main.a2c82f85.chunk.js",
-  "main.js.map": "/MTG-recognizer/static/js/main.a2c82f85.chunk.js.map",
+  "main.js": "/MTG-recognizer/static/js/main.54e48dae.chunk.js",
+  "main.js.map": "/MTG-recognizer/static/js/main.54e48dae.chunk.js.map",
   "static/js/1.7ab14047.chunk.js": "/MTG-recognizer/static/js/1.7ab14047.chunk.js",
   "static/js/1.7ab14047.chunk.js.map": "/MTG-recognizer/static/js/1.7ab14047.chunk.js.map",
   "runtime~main.js": "/MTG-recognizer/static/js/runtime~main.a7881a4e.js",
   "runtime~main.js.map": "/MTG-recognizer/static/js/runtime~main.a7881a4e.js.map",
   "static/css/main.390d6a49.chunk.css.map": "/MTG-recognizer/static/css/main.390d6a49.chunk.css.map",
   "index.html": "/MTG-recognizer/index.html",
-  "precache-manifest.3755e7c491b566adc19e7a592ae332e1.js": "/MTG-recognizer/precache-manifest.3755e7c491b566adc19e7a592ae332e1.js",
+  "precache-manifest.344dcbf7a38a1f82287f37b0c4bcc4ce.js": "/MTG-recognizer/precache-manifest.344dcbf7a38a1f82287f37b0c4bcc4ce.js",
   "service-worker.js": "/MTG-recognizer/service-worker.js"
 }
