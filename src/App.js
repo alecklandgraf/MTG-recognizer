@@ -4,6 +4,8 @@ import { names, imageUris } from "./cardsArray.json";
 import "./App.css";
 import Button from "@material-ui/core/Button";
 
+const COMMON_PREFIX = "https://img.scryfall.com/cards/normal/";
+
 const searchOptions = {
   shouldSort: true,
   includeMatches: true,
@@ -75,6 +77,9 @@ function App() {
     // console.log(results);
     try {
       normal_image_uri = imageUris[results[0].item];
+      if (normal_image_uri) {
+        normal_image_uri = `${COMMON_PREFIX}${normal_image_uri}`;
+      }
     } catch {
       normal_image_uri = "";
     }

@@ -33,9 +33,11 @@ const cardsMap = cards.reduce((acc, card) => {
 
 const names = [];
 const imageUris = [];
+const COMMON_PREFIX = "https://img.scryfall.com/cards/normal/";
 Object.entries(cardsMap).forEach(([key, value]) => {
   names.push(key);
-  imageUris.push(value.normal_image_uri);
+
+  imageUris.push(value.normal_image_uri.replace(COMMON_PREFIX, ""));
 });
 
 fs.writeFile("./src/cardsMap.json", JSON.stringify(cardsMap), "utf8", error => {
