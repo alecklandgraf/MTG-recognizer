@@ -9,7 +9,7 @@ const App = React.lazy(() => import("./App"));
 
 if (SpeechRecognition) {
   ReactDOM.render(
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div className="App-header">Loading...</div>}>
       <App />
     </Suspense>,
     document.getElementById("root")
