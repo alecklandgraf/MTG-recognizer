@@ -25,15 +25,10 @@ function App() {
       <div className="card-display">
         {imageUri ? (
           <div className="cards">
+            <img src={imageUri} alt={`Magic The Gathering Card ${cardMatch}`} />
             <img
               src={imageUri}
               alt={`Magic The Gathering Card ${cardMatch}`}
-              height="350"
-            />
-            <img
-              src={imageUri}
-              alt={`Magic The Gathering Card ${cardMatch}`}
-              height="350"
               className="upside-down"
             />
           </div>
