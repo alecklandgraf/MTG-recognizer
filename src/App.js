@@ -40,15 +40,29 @@ recognition.onerror = function(event) {
   console.log("Error occurred in recognition: " + event.error);
 };
 
-function App() {
+function useCardRecognized() {
   const [cardMatch, setCardMatch] = useState("");
   const [recognitionInProgress, setRecogitionInProgress] = useState(false);
+  const [imageUri, setImageUri] = useState("");
 
   function handleResult(event) {
-    var last = event.results.length - 1;
-    const card = event.results[last][0].transcript;
+    const last = event.results.length - 1;
+    const card = (event.results[last][0].transcript || "").toLowerCase();
 
-    setCardMatch((card || "").toLowerCase());
+    setCardMatch(card);
+
+    if (card) {
+      try {
+        const normal_image_uri = imageUris[fuse.search(card)[0].item];
+        if (normal_image_uri) {
+          setImageUri(`${COMMON_PREFIX}${normal_image_uri}`);
+        }
+      } catch {
+        setImageUri("");
+      }
+    } else {
+      setImageUri("");
+    }
   }
 
   function handleSpeechEnd() {
@@ -56,32 +70,32 @@ function App() {
     setRecogitionInProgress(false);
   }
 
-  function handleClick() {
-    if (!recognitionInProgress) {
-      setRecogitionInProgress(true);
-      recognition.start();
-      console.log("Ready to hear a card");
-    }
-  }
-
   useEffect(() => {
     recognition.onresult = handleResult;
     recognition.onspeechend = handleSpeechEnd;
   }, []);
 
-  let normal_image_uri;
-  let results;
+  return {
+    cardMatch,
+    recognitionInProgress,
+    setRecogitionInProgress,
+    imageUri
+  };
+}
 
-  if (cardMatch) {
-    results = fuse.search(cardMatch);
-    // console.log(results);
-    try {
-      normal_image_uri = imageUris[results[0].item];
-      if (normal_image_uri) {
-        normal_image_uri = `${COMMON_PREFIX}${normal_image_uri}`;
-      }
-    } catch {
-      normal_image_uri = "";
+function App() {
+  const {
+    cardMatch,
+    recognitionInProgress,
+    setRecogitionInProgress,
+    imageUri
+  } = useCardRecognized();
+
+  function handleClick() {
+    if (!recognitionInProgress) {
+      setRecogitionInProgress(true);
+      recognition.start();
+      console.log("Ready to hear a card");
     }
   }
 
@@ -97,15 +111,15 @@ function App() {
         {recognitionInProgress ? "listening" : "Click to start recording"}
       </Button>
       <div className="card-display">
-        {normal_image_uri ? (
+        {imageUri ? (
           <div className="cards">
             <img
-              src={normal_image_uri}
+              src={imageUri}
               alt={`Magic The Gathering Card ${cardMatch}`}
               height="350"
             />
             <img
-              src={normal_image_uri}
+              src={imageUri}
               alt={`Magic The Gathering Card ${cardMatch}`}
               height="350"
               className="upside-down"
